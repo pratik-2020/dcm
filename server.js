@@ -15,6 +15,9 @@ app.use(cors({
     ]
 }))
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('Welcome');
+})
 app.post('/send', (req, res) => {
     // sendMail(req, res);
     const name = req.body.name;
