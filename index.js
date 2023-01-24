@@ -1,4 +1,3 @@
-'use strict';
 const express =  require('express');
 const mongoose = require('mongoose');
 const serverless = require('serverless-http');
@@ -30,6 +29,7 @@ app.post('/send', (req, res) => {
       f.push(e.toLowerCase())
     })
     const email = f[0]+f[1]+'@'+company+'.com'
+    console.log(email)
     const mail = `
 Hello ${sal},
 I am Pratiksingh Rajeshsingh Thakur, a SDE intern at Sarvaha systes, currently pursuing my Bachelor's of Technology at Shri Guru Gobind Singhji Institute of Engineering & Technology, Nanded. I am interested in a SDE intern role at ${company}, so may you please refer me for the job.
